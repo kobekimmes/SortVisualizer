@@ -22,9 +22,11 @@ void setup() {
   }
   
   
-  println(Sort.quick(visualize, 0, visualize.length-1));
+  //println(Sort.quick(visualize, 0, visualize.length-1));
   drawArray(visualize);
-  visualize = Sort.quick(visualize, 0, visualize.length-1);
+  //visualize = Sort.quick(visualize, 0, visualize.length-1);
+  visualize = Sort.stalin(visualize);
+  drawArray(visualize);
 
 }
 

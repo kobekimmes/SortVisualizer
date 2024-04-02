@@ -106,4 +106,20 @@ static class Sort {
 
     return out;
   }
+  
+  
+  static int[] stalin(int[] arr) {
+    int currMax = arr[0];
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] < currMax) {
+        arr[i] = 0;
+      }
+      currMax = Math.max(currMax, arr[i]);
+      
+    }
+    return arr;
+    
+  }
+  
+  
 }
