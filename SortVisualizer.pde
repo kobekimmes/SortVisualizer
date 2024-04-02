@@ -22,7 +22,7 @@ void setup() {
   }
   
   //println(Sort.merge(mergetest1, mt2));
-  println(Sort.mergeSort(visualize, 0, visualize.length-1));
+  println(Sort.quick(visualize, 0, visualize.length-1));
 }
 
 
@@ -30,7 +30,7 @@ void setup() {
 void draw() {
   background(0);
   drawArray(visualize);
-  visualize = Sort.mergeSort(visualize, 0, visualize.length-1);
+  visualize = Sort.quick(visualize, 0, visualize.length-1);
   drawArray(visualize);
 }
 
