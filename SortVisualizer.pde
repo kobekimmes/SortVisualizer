@@ -21,16 +21,19 @@ void setup() {
     visualize[i] = (int) random(cols);
   }
   
-  //println(Sort.merge(mergetest1, mt2));
+  
   println(Sort.quick(visualize, 0, visualize.length-1));
+  drawArray(visualize);
+  visualize = Sort.quick(visualize, 0, visualize.length-1);
+
 }
 
 
 
 void draw() {
   background(0);
-  drawArray(visualize);
-  visualize = Sort.quick(visualize, 0, visualize.length-1);
+  //drawArray(visualize);
+  //visualize = Sort.quick(visualize, 0, visualize.length-1);
   drawArray(visualize);
 }
 
@@ -42,7 +45,7 @@ void drawArray(int[] arr) {
   fill(255);
   for (int i = 0; i < arr.length; i++) {
 
-    rect(i * res, height - arr[i] * res, res, arr[i] * res);
+    rect(i * res, height - ((arr[i]) * res), res, (arr[i]) * res);
   }
   
 }

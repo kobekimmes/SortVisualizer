@@ -38,7 +38,7 @@ static class Sort {
 
   static int[] quick(int[] arr, int low, int high) {
     
-    if (high > low) {
+    if (low < high) {
       
       int p = partition(arr, low, high);
       
@@ -47,13 +47,12 @@ static class Sort {
       
     }
     return arr;
-    
   }
   
-  static int partition(int[] arr, int low, int high) {
+ static int partition(int[] arr, int low, int high) {
     
     int pivot = arr[high];
-    int temp = high;
+    int temp = high--;
     
     while (low <= high) {
       if (arr[low] > pivot) {
@@ -71,7 +70,6 @@ static class Sort {
     }
    swap(arr, low, temp);
    return low;
-    
   }
 
 
